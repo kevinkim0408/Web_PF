@@ -1,0 +1,228 @@
+/*background width, height만 100%하는게아니라 그 부모인 html, body도 100% 해줘야지 background 이미지가 적용 됌*/
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+.bx-wrapper, .bx-viewport, .slider
+{
+    width: 100%;
+    height: 100%;
+}
+.background__01
+{
+    width: 100%;
+    height: 100%;
+    background:url("../images/games-2453777_1920.jpg") no-repeat; 
+/*    이미지사이즈와 포지션 세팅을 해줘야지 윈도우 크기에 상관없이 항상 가득 채움*/
+    background-size: cover;
+    background-position: center;
+}
+.background__02
+{
+    width: 100%;
+    height: 100%;
+    background:url("../images/work-731198_1920.jpg") no-repeat; 
+/*    이미지사이즈와 포지션 세팅을 해줘야지 윈도우 크기에 상관없이 항상 가득 채움*/
+    background-size: cover;
+    background-position: center;
+}
+.background__03
+{
+    width: 100%;
+    height: 100%;
+    background:url("../images/artificial-intelligence-3382507_1920.jpg") no-repeat; 
+/*    이미지사이즈와 포지션 세팅을 해줘야지 윈도우 크기에 상관없이 항상 가득 채움*/
+    background-size: cover;
+    background-position: center;
+}
+.background__04  /* for Contact Background */
+{
+    width: 100%;
+    height: 100%;
+    background:url("../images/smartphone-1957742_1920.jpg") no-repeat; 
+/*    이미지사이즈와 포지션 세팅을 해줘야지 윈도우 크기에 상관없이 항상 가득 채움*/
+    background-size: cover;
+    background-position: center;
+}
+
+/*배경화면에 dot 찍기*/
+.overlay
+{
+    width: 100%;
+    height: 100%;
+/*    여기서는  no-repeat을 추가안함, 이건 이미지를 반복하지 말라는 명령어. 반복안해야지 배경을 꽉 채워줌 */
+    background: url("../images/16.png");
+    position: absolute; /*포지션 위에 절대값에 위치 */
+    top:0;/* 포지션의 가장 위쪽에 출력 */
+    z-index: 1; /*사진을 제일 위로 빼주기*/
+}
+
+/* Home */
+
+.contents 
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -171px;
+    margin-top: -109px; /*문구를 정 중앙으로 보낼려면 우리가 쓰려는 공간의 크기를 잰 다음, 그 공간의 절반만큼 왼쪽, 아래서 빼줘야함 */
+    color:white;
+    font-weight:bold; /* Bold 하는법 */
+    text-align: center;
+    font-family: "Malgun Gothic", sans-serif;
+     z-index: 20; 
+}
+
+.contentsName
+{
+    font-size: 64px;
+    color:white;
+    font-weight:bold; /* Bold 하는법 */
+     /* 가운데로 정렬 */
+    margin-bottom: 25px; /*이 글자 아래로 마진을 25픽셀만큼 둠*/
+}
+
+.contentsJob
+{
+    font-size: 25px;
+    color:white;
+    font-weight:bold; /* Bold 하는법 */
+    margin-bottom: 50px;
+   
+}
+.contentsList
+{
+    font-size: 0; /* 아래서 만든 원가 원 사이의 간격을 없애줌*/
+    /*원래는 정의한 곳에서 li와 다른 li 사이를 띄우면 안되거나 그 사이를 주석으로 만들어 줘야하는데, 이렇게 font size를 0으로 해버리는게 가독성이 좋음*/
+}
+.contentsList> li /*이 contentslist 안에서 li 안에있는 모든 것들*/
+{
+    display: inline-block; /*가로로 정렬*/
+    width:52px;
+    height:52px;
+    line-height: 52px;
+    border:1px solid white; /*여기까지만 쓰면 정사각형 테두리 */
+    border-radius:50%; /* 이게 원 테두리 만드는거, %따라 원 테두리 모양이 바뀜*/
+    font-size:16px; /*위에서 원 사이의 간격을 없애려고 폰트 사이즈를 0을 해준걸, 여기서 다시 폰트 사이즈를 재설정 해주면 다시 커짐*/
+    margin-right: 20px;
+
+    
+}
+.contentsList> li:last-child
+{/*    오른쪽에는 마진을 20을 줬는데 왼쪽은 필요없으니까 지워줘야함*/
+    margin-right: 0;
+}
+.contentsList>li>a
+{
+    color:white;
+}
+
+/* Upper Menu*/
+.header
+{
+    position: absolute;
+    top: 1%;
+    left: 70%;
+    font-weight:bold;
+    font-family: "Malgun Gothic", sans-serif;
+    z-index: 20; 
+    font-size: 20px;
+/*    text-align: center;*/
+}
+.header-menus> li
+{
+  display: inline-block;
+    margin-right: 10px;
+
+}
+.header-menus> li>a
+{
+    color:White;
+}
+
+/* Contact */
+.Contact{
+    position: absolute;
+    top:51%;
+    left:45%;
+    margin-left: -171px;
+    margin-top: -259px; /*문구를 정 중앙으로 보낼려면 우리가 쓰려는 공간의 크기를 잰 다음, 그 공간의 절반만큼 왼쪽, 아래서 빼줘야함 */
+    color:white;
+    font-weight:bold; /* Bold 하는법 */
+    text-align: center;
+    font-family: "Malgun Gothic", sans-serif;
+    z-index: 20; 
+}
+
+.ContactBasic
+{
+    font-size: 64px;
+    color:white;
+    font-weight:bold; /* Bold 하는법 */
+     /* 가운데로 정렬 */
+    margin-bottom: 50px; /*이 글자 아래로 마진을 25픽셀만큼 둠*/
+}
+
+.ContactEmail
+{
+    font-size: 25px;
+    color:white;
+    font-weight:bold; /* Bold 하는법 */
+    margin-bottom: 50px;
+   
+}
+
+/* About Me*/
+.AboutBackground
+{
+    background: white;
+    opacity:0.8;
+    width: 1300px;
+    height: 600px;
+    position: absolute;
+    top:50%;
+    left:25%;
+    margin-left: -171px;
+    margin-top: -259px; /*문구를 정 중앙으로 보낼려면 우리가 쓰려는 공간의 크기를 잰 다음, 그 공간의 절반만큼 왼쪽, 아래서 빼줘야함 */
+    z-index: 20; 
+}
+
+.AboutMe>h1
+{
+    color:black;
+    font-weight:bold; /* Bold 하는법 */
+    font-size:50px;
+    position:absolute;
+    top:44%;
+    left:8%;
+    font-family: "Malgun Gothic", sans-serif;
+    border-bottom:5px solid gray;
+}
+
+.AboutMe
+{
+    
+}
+
+.AboutMe2>h1
+{
+    color:black;
+    font-size:30px;
+    position:absolute;
+    top:24%;
+    left:35%;
+    right:10%;
+    font-family: "Malgun Gothic", sans-serif;
+}
+
+.AboutMe2>h2
+{   
+    color:black;
+    font-size:30px;
+    position:absolute;
+    top:55%;
+    left:35%;
+    right:10%;
+    font-family: "Malgun Gothic", sans-serif;   
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>심플포트폴리오</title>     
+<!--     외부사이트 연결, reset과 style.css를 이 html과 같이 쓰겠다는 의미  -->
+        <link href ="css/reset.css" rel="stylesheet"
+        type="text/css" />   
+         <link href ="css/style.css" rel="stylesheet"
+        type="text/css" />  
+<!--      폰트 어썸 사이트에서 가져온거-->
+        <link href ="plugins/web-fonts-with-css/css/all.css" rel="stylesheet" type="text/css" />
+<!--     bxslider을 불러오기 - 자바스크립, 제이쿼리-->
+        <script 
+        src="js/jquery.1.12.4.js"
+        type="text/javascript"></script>
+         <script 
+         src= "plugins/bxslider/js/jquery.bxslider.js"
+         type = "text/javascript"></script>
+<!--     slider이라는 태그를 가진 함수에 bxslider를 실행시키라는 명령-->
+         <script>
+             $(document).ready(function()
+              {
+                 $('.slider').bxSlider
+                 ({
+                    controls:false,
+                    pager:false,
+                    auto:true
+                 });
+                
+             });
+        </script>
+
+        
+  
+    </head>
+    <body>
+<!--    배경화면에 dot 찍어서 어둡게 하려는 클래스-->
+    <div class="overlay"></div>
+<!--      부모클래스를 하나 만들어서 슬라이드 할 배경을 총괄-->
+       <div class = "slider"> 
+        <div class = "background__01"></div>
+        <div class = "background__02"></div>
+        <div class = "background__03"></div>
+        </div>
+        <div class= "contents">
+            <p class ="contentsName"> Kim, Junho</p>
+            <p class ="contentsJob"> Game / Web Programmer</p>
+                <ul class = "contentsList">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100029032968739" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/kevi______n___/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://kevinkim0408.blogspot.com/2019/09/01-introduction.html" target="_blank">
+                        <i class="fab fa-blogger-b"></i>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class= "header"> 
+        <ul class= "header-menus">
+            <li>
+                <a href="index.html">
+                    <i class= "fas fa-home">Home</i>
+                </a>
+            </li>
+             
+               <li>
+                <a href="About.html">
+                    <i class= "fas fa-address-card">About</i>
+                </a>
+            </li>
+              <li>
+                <a href="Skills.html" >
+                    <i class= "fas fa-keyboard">Skills</i>
+                </a>
+            </li>
+              <li>
+                <a href="Project.html" >
+                    <i class= "fab fa-github">Projects</i>
+                </a>
+            </li>
+                <li>
+                <a href="Contact.html" >
+                    <i class= "fas fa-paper-plane">Contact</i>
+                </a>
+            </li>
+        </ul>
+        </div>
+        
+    </body>
+</html>
